@@ -46,13 +46,15 @@ function open() {
 		text-align: center;
   		transform: translate(-50%,-50%);
   		-ms-transform: translate(-50%,-50%);
-		cursor: pointer;
 		white-space: nowrap;
 		opacity:0.95;
 			}
 
 		.coverhover:hover {
   		color: yellow;
+		opacity:1;
+		cursor: pointer;
+
 			}
 
 		sup {
@@ -95,8 +97,8 @@ function open() {
 			}
 	
 		@keyframes vibrate {
-		  38% { transform: rotate(1degree); }
-		  40% { transform: translateY(-1px); }
+		  40% { transform: translateY(0px); }
+		  41% { transform: translateY(0px); }
 		  42% { transform: translateY(1px); }
 		  44% { transform: translateY(-1px); }
 		  46% { transform: translateY(1px); }
@@ -106,7 +108,9 @@ function open() {
 		  54% { transform: translateY(1px); }
 		  56% { transform: translateY(-1px); }
 		  58% { transform: translateY(1px); }
-		  60% { transform: translateY(0px); }
+		  60% { transform: translateY(-1px); }
+		  62% { transform: translateY(0px); }
+		  64% { transform: translateY(0px); }
 			}
 
 		@media only screen and (max-width: 450px) {
