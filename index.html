@@ -8,39 +8,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="media/favicon.ico" sizes="32x32"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
 </head>
 
+<script>
+document.addEventListener('click', open);
+function open() {
+    document.getElementById('cover').style.display="none";
+    document.getElementById('covertext').style.display="none";
+    document.getElementById('afterclick1').style.display="block";
+    document.getElementById('afterclick2').style.display="block";
+    document.getElementById('gonk').play();
+    document.removeEventListener('click', open);
+}
+</script>
+
 <style>
-	.main {
+		.cover {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+  		display: flex;
+			}
+
+		.covertext {
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		font-size: 1.5em;
+		line-height: 1;
+    		letter-spacing: 0.1em;
+  		color: white;
+		font-family: "Amino-Regular";
+		text-align: center;
+  		transform: translate(-50%,-50%);
+  		-ms-transform: translate(-50%,-50%);
+		cursor: pointer;
+			}
+
+		.coverhover:hover {
+  		color: yellow;
+			}
+
+		sup {
+		vertical-align: top;
+		font-family: "Amino-Light";
+		font-size: 0.5rem;
+    		letter-spacing: 0.3em;
+		color:Gainsboro;
+		cursor:text;
+			}
+
+		.main {
+		display:none;
 		background-color: #ffffff;
-		max-width: 880px;
+		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 10px 10px;
+		padding: 10px 5px;
 		font-family: "Roboto", sans-serif;
 		text-align: center;
 		color:black;
 			}
 
 		img.a {
-		width: 440px
+		width: 400px;
   		animation: vibrate 2.188s;
   		animation-iteration-count: 1;
 			}
 	
 		@keyframes vibrate {
-		  38% { transform: translateY(2px); }
-		  40% { transform: translateY(-2px); }
-		  42% { transform: translateY(2px); }
-		  44% { transform: translateY(-2px); }
-		  46% { transform: translateY(2px); }
-		  48% { transform: translateY(-2px); }
-		  50% { transform: translateY(2px); }
-		  52% { transform: translateY(-2px); }
-		  54% { transform: translateY(2px); }
-		  56% { transform: translateY(-2px); }
-		  58% { transform: translateY(2px); }
+		  38% { transform: rotate(1degree); }
+		  40% { transform: translateY(-1px); }
+		  42% { transform: translateY(1px); }
+		  44% { transform: translateY(-1px); }
+		  46% { transform: translateY(1px); }
+		  48% { transform: translateY(-1px); }
+		  50% { transform: translateY(1px); }
+		  52% { transform: translateY(-1px); }
+		  54% { transform: translateY(1px); }
+		  56% { transform: translateY(-1px); }
+		  58% { transform: translateY(1px); }
 		  60% { transform: translateY(0px); }
 			}
 
@@ -50,18 +97,37 @@
   				}
 			}
 
+@font-face {
+  font-family: Amino-Regular;
+  src: url(media/Amina-Regular.woff);
+    src: url(media/Amina-Regular.woff2);
+}
+
+@font-face {
+  font-family: Amino-Light;
+  src: url(media/Amina-Light.woff);
+    src: url(media/Amina-Light.woff2);
+}
+
+
+
 </style>
 
 <body>
-	<audio autoplay><source src="gonk.mp3"></audio>
-	<div class="main">
+	
+	<div class="cover" style="height:100%;overflow: hidden;"><img id="cover" style="width:100%;object-fit: cover;" src="media/cover.jpg"></div>
 
+	<div class="covertext" id="covertext"><span style="font-size:0.9em;color:Gainsboro;cursor:text;">–>&nbsp</span><span class="coverhover">autech.re</span><sup>(click)</sup></div>
+	
+	<audio id="gonk"><source src="media/gonk.mp3"></audio>
+
+	<div class="main" id="afterclick1">
 	  <p style="font-size: 2em;">You've been gonked!</p>
 		
-	  <img class="a" src="gonked.jpg" alt="Wholesome photo of Rob and Sean from Autechre kicking snow at the camera">
+	  <img class="a" src="media/gonked.jpg" alt="Wholesome photo of Rob and Sean from Autechre kicking snow at the camera">
 	</div>	
 	
-	<div class="main">
+	<div class="main" id="afterclick2">
 	  <img src="https://autechism.pythonanywhere.com/count/tag.svg?url=autech.re">
 	</div>
 	
