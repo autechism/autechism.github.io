@@ -17,6 +17,7 @@ function open() {
     document.getElementById('covertext').style.display="none";
     document.getElementById('afterclick1').style.display="block";
     document.getElementById('afterclick2').style.display="block";
+    document.getElementById('afterclick3').style.display="block";
     document.body.style.backgroundColor = 'white'
     document.getElementById('gonk').play();
     document.removeEventListener('click', open);
@@ -73,6 +74,18 @@ function open() {
 		font-family: "Amino-Regular", Arial, Helvetica, sans-serif;
 		text-align: center;
 		color:black;
+			}
+		
+		.email {
+		display:none;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		padding-right:4px;
+		font-family: "Amino-Regular", Arial, Helvetica, sans-serif;
+		font-size:0.5em;
+		text-align: right;
+		color:Grey;
 			}
 
 		img.a {
@@ -136,6 +149,10 @@ function open() {
 	  <img src="https://autechism.pythonanywhere.com/count/tag.svg?url=autech.re">
 	</div>
 	
+	<div class="email" id="afterclick3">
+	  <p>autechism@pm.me</p>
+	</div>
+
 
 	
 </body>
