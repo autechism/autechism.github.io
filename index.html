@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>gonk</title>
+    <title>autech.re</title>
     <meta name="description" content="gonk">
     <meta name="keywords" content="autechre gonk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@ function open() {
     document.body.style.backgroundColor = 'white'
     document.getElementById('gonk').play();
     document.removeEventListener('click', open);
+    document.title = "gonk";
 }
 </script>
 
@@ -29,6 +30,7 @@ function open() {
 		left: 0px;
 		top: 0px;
   		display: flex;
+		opacity:0.75;
 			}
 
 		.covertext {
@@ -39,12 +41,13 @@ function open() {
 		line-height: 1;
     		letter-spacing: 0.1em;
   		color: white;
-		font-family: "Amino-Regular";
+		font-family: "Amino-Regular", Arial, Helvetica, sans-serif;
 		text-align: center;
   		transform: translate(-50%,-50%);
   		-ms-transform: translate(-50%,-50%);
 		cursor: pointer;
 		white-space: nowrap;
+		opacity:0.95;
 			}
 
 		.coverhover:hover {
@@ -53,7 +56,7 @@ function open() {
 
 		sup {
 		vertical-align: top;
-		font-family: "Amino-Light";
+		font-family: "Amino-Light", Arial, Helvetica, sans-serif;
 		font-size: 0.5rem;
     		letter-spacing: 0.3em;
 		color:Gainsboro;
@@ -67,7 +70,7 @@ function open() {
 		margin-left: auto;
 		margin-right: auto;
 		padding: 10px 5px;
-		font-family: "Roboto", sans-serif;
+		font-family: "Amino-Regular", Arial, Helvetica, sans-serif;
 		text-align: center;
 		color:black;
 			}
