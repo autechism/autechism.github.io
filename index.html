@@ -58,6 +58,24 @@
 	  <img src="https://autechism.pythonanywhere.com/count/tag.svg?url=autech.re" height="1.5em"> gonks delivered.
           </p>
 
+		
+	<div id="count"></div>
+		
+		
 	</div>
+	
+
+	
 </body>
+	
+<script>
+let targetUrl = 'www.autech.re';
+let query = '?url=' + encodeURIComponent(targetUrl);
+let xmlHttp = new XMLHttpRequest();
+xmlHttp.withCredentials = true;
+xmlHttp.open('GET', 'https://autechism.pythonanywhere.com/nocount' + query, false);
+xmlHttp.send(null);
+document.getElementById("count").innerHTML = xmlHttp.responseText;
+</script>
+	
 </html>
